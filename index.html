@@ -12,7 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <title>Lanchonete</title>
+    <meta property="og:type" content="website"/>
+    <meta property= "og:title" content="Dev Burger Itauna"/>
+    <meta property= "og:image" content="https://"/>
+    <meta property= "og:description" content="O melhor hamburger caseiro de verdade"/>
+    <meta property= "og:site_name" content="DevBurger"/>
+
+    
+    <title>Dev burger Itauna</title>
 </head>
 
 <body class="menu-gradient-background">
@@ -37,7 +44,7 @@
     <h2 class="text-3xl md:text-5xl font-bold text-center mt-9 mb-6 text-white">Conheça nosso cardápio</h2>
     <!-- Início do cardápio -->
     <main id="menu__cardapio">
-        <section class=" grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16 ">
+        <section class=" grid grid-cols-1 md:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16 ">
             <!-- Produto item/1 -->
             <div class="flex gap-2">
                 <img src="./assets/hamb-1.png" alt="X-Salada"
@@ -122,13 +129,97 @@
                 </div>
             </div>
             <!-- Fim Produto/4 -->
+            <!-- Produto item/5 -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-5.png" alt="X-Salada"
+                    class=" p-{2} w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">X-Salada-molho cheddar</p>
+                    <p class="text-sm text-white">Com alface fresca, tomate maduro e fatias generosas de queijo cheddar
+                        derretido,
+                        este sanduíche é uma mistura perfeita de sabores e texturas que vai agradar</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 21.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="X-Salada-molho cheddar"
+                            data-price="21.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Produto/5 -->
+            <!-- Produto item/6 -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-6.png" alt="X-Bacon"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">X-Picanha c/fritas</p>
+                    <p class="text-sm text-white">Com alface fresca, tomate maduro e fatias generosas de queijo cheddar
+                        derretido,
+                        este sanduíche é uma mistura perfeita de sabores e texturas que vai agradar</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 28.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="X-Picanha c/fritas" 
+                        data-price="28.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Produto/6 -->
+            <!-- Produto item/7 -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-7.png" alt="X-Salada"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">X-Burger Barcue c/aneis cebola</p>
+                    <p class="text-sm text-white">Com alface fresca, tomate maduro e fatias generosas de queijo cheddar
+                        derretido,
+                        este sanduíche é uma mistura perfeita de sabores e texturas que vai agradar</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 15.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="X-Burger Barcue c/aneis cebola"
+                        data-price="15.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Produto/7 -->
+            <!-- Produto item/8 -->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-4.png" alt="X-Bacon"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">X-Frango c/Pickles</p>
+                    <p class="text-sm text-white">Com alface fresca, tomate maduro e fatias generosas de queijo cheddar
+                        derretido,
+                        este sanduíche é uma mistura perfeita de sabores e texturas que vai agradar</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 25.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="X-Frango c/Pickles"
+                        data-price="25.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         <section class="mx-auto max-w-7xl px-2 my-2">
             <div>
                 <h2 class="font-bold text-white text-3xl text-center">Cardápio de bebidas</h2>
             </div>
-            <!--inicio bebidas-->
-            <div class=" grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16 " id="menu__cardapio">
+            <!--inicio bebidas 1-->
+            <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7xl px-3 mb-16 " id="menu__cardapio">
                 <!-- Produto bebidas/1 -->
                 <div class="flex gap-2">
                     <img src="./assets/coca-colasvg.svg" alt="Coca-Cola"
@@ -162,8 +253,43 @@
                         </div>
                     </div>
                 </div>
+                <!-- Produto bebidas/2 -->
+            <div class="flex gap-2">
+                <img src="./assets/agua-com-gas.svg" alt="Agua"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">Agua c/gas</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 4.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="Aguac/gas"
+                        data-price="4.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Produto bebidas/3 -->
+            <div class="flex gap-2">
+                <img src="./assets/suco-natural.svg" alt="Coca-Cola"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                    <p class="font-bold">Suco Natural</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 5.90</p>
+                        <!-- Botão para adicionar ao carrinho -->
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="Suco"
+                        data-price="4.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
             <!--Fim bebidas-->
+            
         </section>
     </main>
     <!-- Fim do cardápio -->

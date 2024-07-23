@@ -147,18 +147,35 @@ checkoutBtn.addEventListener("click", function() {
             ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
         )    
     }).join("")
-    const message = encodeURIComponent(`Pedido:\n${cartItems}\n\nEndereço: ${addressInput.value}`);
-    const phone = "+5537991707610";
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-
-    cart = [];
-    updateCartModal();
+    document.getElementById("checkout-btn").addEventListener("click", function() {
+        const addressInput = document.getElementById("address");
+    
+        // Criação da string com os itens do carrinho
+        const cartItems = cart.map(item => {
+            return ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)} |`;
+        }).join(" ");
+    
+        // Cálculo do total do pedido
+        const cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+    
+        // Criação da mensagem para o WhatsApp
+        const message = encodeURIComponent(`Pedido:\n${cartItems}\nTotal: R$${cartTotal}\nEndereço: ${addressInput.value}`);
+        const phone = "+5537991707610";
+        
+        // Abre o link do WhatsApp com a mensagem
+        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    
+        // Limpa o carrinho e atualiza o modal
+        cart = [];
+        updateCartModal();
+    });
+    
 });
 /*Funçao Open Serviçe */
 function checkoutlanchoneteOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 22;
+    return hora >= 10 && hora < 22;
 }
 /*Manipulando a hora na tag span no html  */
 const spanItem = document.getElementById("data-span")
