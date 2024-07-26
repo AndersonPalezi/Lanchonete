@@ -647,6 +647,10 @@ video {
   position: absolute;
 }
 
+.\!relative {
+  position: relative !important;
+}
+
 .relative {
   position: relative;
 }
@@ -756,6 +760,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mb-6 {
@@ -1920,6 +1928,10 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.border-yellow-500\/60 {
+  border-color: rgb(234 179 8 / 0.6);
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1954,9 +1966,18 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-yellow-100\/30 {
+  background-color: rgb(254 249 195 / 0.3);
+}
+
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-home {
@@ -2085,8 +2106,16 @@ video {
   padding: 0.25rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-1 {
@@ -2295,9 +2324,29 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2681,8 +2730,64 @@ video {
 }
 
 .menu-gradient-background {
-  background: linear-gradient(135deg, #ff0066, #ffcc00);
+  background: linear-gradient(135deg, #f06, #fc0);
   /* Gradiente específico para o cardápio */
+}
+
+/* Estilos para a descrição do texto truncado */
+
+.description {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease;
+  max-height: 4.5em;
+  /* Define uma altura máxima padrão para a versão truncada */
+  line-height: 1.5em;
+  /* Define a altura da linha para que o max-height funcione */
+  position: relative;
+}
+
+/* Estilo para a descrição expandida */
+
+.description.expanded {
+  max-height: none;
+  /* Permite que o texto ocupe todo o espaço necessário */
+}
+
+/* Fallback para navegadores que não suportam line-clamp */
+
+.description::after {
+  content: '...';
+  display: block;
+  text-align: right;
+  margin-top: 0.5em;
+}
+
+/* Compatibilidade para navegadores que suportam line-clamp */
+
+@supports (line-clamp: 3) {
+  .description {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
+
+/* Fallback para navegadores que não suportam line-clamp */
+
+@supports not (line-clamp: 3) {
+  .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    /* Define uma altura fixa para navegadores sem suporte */
+  }
 }
 
 @media (min-width: 640px) {

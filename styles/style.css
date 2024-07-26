@@ -1,7 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .menu-gradient-background {
-    background: linear-gradient(135deg, #ff0066, #ffcc00); /* Gradiente específico para o cardápio */
+
+    background: linear-gradient(135deg, #f06, #fc0);
+    /* Gradiente específico para o cardápio */
+}
+
+/* Estilos para a descrição do texto truncado */
+.description {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease;
+    max-height: 4.5em;
+    /* Define uma altura máxima padrão para a versão truncada */
+    line-height: 1.5em;
+    /* Define a altura da linha para que o max-height funcione */
+    position: relative;
+}
+
+/* Estilo para a descrição expandida */
+.description.expanded {
+
+    max-height: none;
+    /* Permite que o texto ocupe todo o espaço necessário */
+}
+
+/* Fallback para navegadores que não suportam line-clamp */
+.description::after {
+
+    content: '...';
+    display: block;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+/* Compatibilidade para navegadores que suportam line-clamp */
+@supports (line-clamp: 3) {
+    .description {
+
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+}
+
+/* Fallback para navegadores que não suportam line-clamp */
+@supports not (line-clamp: 3) {
+    .description {
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .description {
+
+        max-height: 4.5em;
+        /* Define uma altura fixa para navegadores sem suporte */
+    }
 }

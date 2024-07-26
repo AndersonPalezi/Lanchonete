@@ -1,0 +1,40 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "unit-whitelist": [
+            "px",
+            "em",
+            "rem",
+            "%",
+            "vh",
+            "vw"
+        ],
+        "comment-empty-line-before": [
+            "always",
+            {
+                "ignore": [
+                    "stylelint-commands",
+                    "between-blocks",
+                    "your-comment-type"
+                ]
+            }
+        ],
+        "property-no-vendor-prefix": null,
+        "font-family-no-missing-generic-family-keyword": true,
+        "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+        "alpha-value-notation": "percentage",
+        "length-zero-no-unit": true,
+        "declaration-empty-line-before": [
+            "always",
+            {
+                "ignore": [
+                    "after-declaration",
+                    "your-declaration-type"
+                ]
+            }
+        ],
+        "media-feature-range-notation": "prefix",
+        "color-hex-length": "short",
+        "property-no-unknown": null
+    }
+}
